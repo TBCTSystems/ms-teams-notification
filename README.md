@@ -20,10 +20,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       # this is the new step using the ms-teams-notification action
       - name: Notify dedicated teams channel
-        uses: jdcargile/ms-teams-notification@v1.4
+        uses: jdcargile/ms-teams-notification@v1.5
         with:
           github-token: ${{ github.token }} # this will use the runner's token.
           ms-teams-webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
